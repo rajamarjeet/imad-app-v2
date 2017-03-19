@@ -5,7 +5,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var contentone = {
+var articleone = {
     title: 'article one : amit raj',
     heading: 'article one',
     date: 'mar 5, 2017',
@@ -23,6 +23,7 @@ var contentone = {
   var heading = data.heading;
   var date = data.date;
   var content = data.content;
+  
 var htmltemplate =`
  <html>
     <head>
