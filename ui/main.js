@@ -1,11 +1,11 @@
 console.log('Loaded!');
 
-var element = document.getElementByid('main-text');
+var element = document.getElementById('main-text');
 element.innerHTML = 'i am amit';
 
 // move the image
 
-var img = document.getElementByid('madi');
+var img = document.getElementById('madi');
 var marginLeft = 0;
 function moveright (){
     marginLeft = marginLeft + 5;
