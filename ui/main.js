@@ -6,6 +6,11 @@ element.innerHTML = 'i am amit';
 // move the image
 
 var img = document.getElementByid('madi');
+var marginLeft = 0;
+function moveright (){
+    marginLeft = marginLeft + 5;
+    img.style.marginLeft = marginLeft + 'px';
+}
 img.onclick = function () {
-    madi.style.marginLeft = '100px';
+    var interval = setinterval(moveRight, 50);
 };
