@@ -77,12 +77,6 @@ app.get('/counter', function (req, res) {
     counter = counter + 1;
     res.send(counter.toString());
 });
-app.get("/:articleName", function (req, res){
-    // articleName == article-one
-    // articles[articleName] == {} content object for article one
-    var articleName = req.params.articleName;
-    res.send(createtemplate(articles[articleName]));
-});
 var names = [];
 app.get('/submit-name/:name', function (req,res){
     //get the name from request
@@ -92,6 +86,13 @@ app.get('/submit-name/:name', function (req,res){
     
     res.send(JSON.stringify(names));
 });
+app.get("/:articleName", function (req, res){
+    // articleName == article-one
+    // articles[articleName] == {} content object for article one
+    var articleName = req.params.articleName;
+    res.send(createtemplate(articles[articleName]));
+});
+
 
 app.get('/article-two', function (req, res){
      res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
